@@ -14,20 +14,20 @@ const fadeVariants = {
 export const WelcomeScreen = () => {
   const { setScreen } = useAppStore();
   return (
-    <motion.div variants={fadeVariants} initial="hidden" animate="visible" exit="exit" className="flex flex-col items-center justify-center min-h-screen text-center bg-[#000000]">
-      <div className="w-[40px] h-[40px] bg-[#D5FF33] rounded-lg flex items-center justify-center shadow-[inset_0_1px_5px_1px_rgba(255,255,255,0.3),0_10px_35px_-5px_rgba(213,255,51,0.3)]">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <motion.div variants={fadeVariants} initial="hidden" animate="visible" exit="exit" className="flex flex-col items-center justify-center min-h-[100dvh] text-center bg-[#000000] px-4">
+      <div className="w-[64px] h-[64px] bg-[#D5FF33] rounded-[16px] flex items-center justify-center shadow-[inset_0_1px_5px_1px_rgba(255,255,255,0.3),0_10px_35px_-5px_rgba(213,255,51,0.3)]">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M17 6.5H7V12H17V17.5H7" stroke="black" strokeWidth="3" strokeLinecap="square" strokeLinejoin="miter"/>
         </svg>
       </div>
-      <h1 className="mt-[25px] text-[18px] font-semibold text-white">Сдвиг: Проект и клиент</h1>
-      <p className="mt-[19px] text-[11px] leading-[16px] text-[#494949] whitespace-pre-line">
+      <h1 className="mt-[25px] text-[24px] font-semibold text-white tracking-tight">Сдвиг: Проект и клиент</h1>
+      <p className="mt-[15px] text-[15px] leading-[22px] text-[#888888] whitespace-pre-line">
         Взаимодействие с вашими проектами{'\n'}в мобильном приложении Telegram
       </p>
       
       <button 
         onClick={() => setScreen('role_select')} 
-        className="mt-[55px] w-[250px] h-[45px] rounded-[14px] bg-[#D5FF33] text-black font-semibold text-[13px] hover:shadow-[0_0_55px_0_rgba(213,255,51,0.25)] active:scale-95 transition-all flex items-center justify-center"
+        className="mt-[55px] w-full max-w-[320px] h-[56px] rounded-[16px] bg-[#D5FF33] text-black font-semibold text-[16px] hover:shadow-[0_0_55px_0_rgba(213,255,51,0.25)] active:scale-95 transition-all flex items-center justify-center"
       >
         Войти через Telegram
       </button>
